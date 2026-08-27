@@ -4,7 +4,7 @@
 
 ## Authorization
 
-Bearer <yourAuthToken>
+Bearer ```yourAuthToken```
 
 ## Default Response
 
