@@ -2,6 +2,10 @@
 
 **Endpoint:** `https://animalcompany.us-east1.nakamacloud.io/v2/account`
 
+## Authorization
+
+Bearer yourAuthToken
+
 ## Default Response
 
 ```json
@@ -40,6 +44,3 @@
 
 - All timestamps are in **ISO 8601 UTC** format (`YYYY-MM-DDTHH:mm:ssZ`).
 - The `wallet` is a escaped json, it is a json but just a string
-```
-
----
