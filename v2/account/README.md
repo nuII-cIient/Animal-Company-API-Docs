@@ -25,7 +25,7 @@
 }
 ```
 
-## Response Fields
+## Response Despripition
 
 | Field | Type | Description |
 |-------|------|-------------|
