@@ -1,6 +1,10 @@
-# https://animalcompany.us-east1.nakamacloud.io/v2/account
+# Animal Company API - Account Endpoint
 
-Response:
+**Endpoint:** `https://animalcompany.us-east1.nakamacloud.io/v2/account`
+
+## Default Response
+
+```json
 {
   "user": {
     "id": "00000000-0000-0000-0000-000000000000",
@@ -15,14 +19,27 @@ Response:
   },
   "wallet": "{\"hardCurrency\": 0, \"researchPoints\": 0}"
 }
+```
 
-id: your user ID
-username: a random string of characters
-display name: your meta/steam username
-lang_tag: what language your game is in
-metadata: stuff for devs (dev mode)
-steam_id: your steam id (only if its a steam token)
-edge_count: most ammount of friends you have had
-create_time: when your account was created (a timestamp in ISO 8601 format)
-update_time: when your account was last updated (a timestamp in ISO 8601 format)
-wallet: Company Coins and Research Points
+## Response Fields
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `id` | `string` (UUID) | Unique user identifier |
+| `username` | `string` | Randomly generated alphanumeric string |
+| `display_name` | `string` | User's display name (from Meta/Steam) |
+| `lang_tag` | `string` | Language tag for the user's game client (e.g., `en`, `fr`, `es`) |
+| `metadata` | `string` (JSON) | Developer-only metadata (enabled in dev mode) |
+| `steam_id` | `string` | Steam ID — only present if authenticated via Steam token |
+| `edge_count` | `integer` | Maximum number of friends the user has ever had |
+| `create_time` | `string` (ISO 8601) | Account creation timestamp |
+| `update_time` | `string` (ISO 8601) | Last account update timestamp |
+| `wallet` | `string` (JSON) | Contains `hardCurrency` (Company Coins) and `researchPoints` |
+
+## Notes
+
+- All timestamps are in **ISO 8601 UTC** format (`YYYY-MM-DDTHH:mm:ssZ`).
+- The `wallet` is a escaped json, it is a json but just a string
+```
+
+---
