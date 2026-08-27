@@ -2,9 +2,9 @@
 
 **Endpoint:** `https://animalcompany.us-east1.nakamacloud.io/v2/account`
 
-## Authorization
+## Authorization: `Bearer yourAuthToken`
 
-Bearer ```yourAuthToken```
+## METHOD: `GET`
 
 ## Default Response
 
